@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Menu
+   ========================================================================== */
+
+#menu {
+  position: fixed;
+  width: 100%;
+  height: 0;
+  top: 0;
+  right: 0;
+  background: #f26a3d;
+  background: rgba(242, 97, 48, 0.95);
+  z-index: 400;
+  overflow: hidden;
+  opacity: 0;
+  font-family: 'Fira Sans', sans-serif;
+  -webkit-transition: opacity ease .4s;
+  transition: opacity ease .4s;
+}
+
+.menu-active #menu {
+  height: 100%;
+  opacity: 1;
+}
+
+#menu {
+  .close-button {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    border: 1px solid #fff;
+    color: transparent;
+    cursor: pointer;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    -webkit-border-radius: 2em;
+    border-radius: 2em;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    &:hover, &:focus {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+    &:after, &:before {
+      position: absolute;
+      width: 1em;
+      height: 1px;
+      left: 50%;
+      top: 50%;
+      margin-left: -0.5em;
+      content: '';
+      background: #fff;
+    }
+    &:after {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    &:before {
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+  ul {
+    position: relative;
+    width: 50%;
+    top: 50%;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    -webkit-transform: translateY(-100%) rotateX(-45deg);
+    transform: translateY(-100%) rotateX(-45deg);
+    -webkit-transition: all ease .8s;
+    transition: all ease .8s;
+  }
+}
+
+.menu-active #menu ul {
+  -webkit-transform: translateY(-50%) rotateX(0);
+  transform: translateY(-50%) rotateX(0);
+}
+
+#menu li {
+  position: relative;
+  font-size: 1.5em;
+  line-height: 0.666em;
+  &:before {
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    left: 25%;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    background: rgba(255, 255, 255, 0.5);
+  }
+  &:last-child:before {
+    display: none;
+  }
+  &.active {}
+  a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    &:hover, &:focus {
+      color: #fff;
+    }
+  }
+}
+
+.menu-active #menu li a {
+  padding: 1em;
+}
+
+#menu li {
+  a i {
+    position: relative;
+    top: -0.25em;
+    font-size: 0.5em;
+    color: inherit;
+  }
+  &.active a {
+    color: #fff;
+    font-weight: 500;
+  }
+}

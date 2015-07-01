@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Media Queries - Smaller than 960px
+   ========================================================================== */
+
+@media only screen and (max-width: 960px) {
+  .blog-logo, .nav-button {
+    position: absolute;
+  }
+  #blog-author {
+    margin: auto;
+  }
+}
+
+/* ==========================================================================
+   Media Queries - Smaller than 640px
+   ========================================================================== */
+
+@media only screen and (max-width: 640px) {
+  html {
+    font-size: 50%;
+  }
+  .post-share, .post-tags {
+    max-width: none;
+    float: none;
+    margin: 0 0 2em;
+  }
+  .post-share a {
+    margin-left: 0;
+    margin-right: 0.666em;
+  }
+  .post-nav i {
+    font-size: 1.5em;
+  }
+}
+
+/* ==========================================================================
+   Media Queries - Smaller than 480px
+   ========================================================================== */
+
+@media only screen and (max-width: 480px) {
+  .inner {
+    padding: 0 16px;
+  }
+  .post-template #main-header {
+    padding: 16px 0;
+  }
+  #main-nav a {
+    margin: 16px;
+  }
+  #menu ul {
+    width: 75%;
+  }
+  .post-author-avatar {
+    margin: -0.25em 0 0 0.5em;
+  }
+  .container .post.featured .post-title:after {
+    left: 0;
+    top: -1.75em;
+  }
+  .post-content {
+    img, .fluid-width-video-wrapper {
+      width: 100%;
+      margin-left: auto;
+    }
+  }
+  .post-nav:after {
+    display: none;
+  }
+  .post-nav-next, .post-nav-prev {
+    display: block;
+    width: 100%;
+  }
+  .post-nav-teaser {
+    position: relative;
+    min-height: 4em;
+    padding: 2em 0;
+  }
+  .post-nav-next .post-nav-teaser {
+    &:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+      margin-bottom: -1px;
+      background: #e5e4e1;
+      z-index: 2;
+    }
+    padding-right: 0;
+    padding-left: 1.5em;
+  }
+  .post-nav-prev .post-nav-teaser {
+    padding-left: 0;
+    padding-right: 1.5em;
+  }
+  .post-nav-next i {
+    margin-left: -1em;
+  }
+  .post-nav-prev i {
+    margin-right: -1em;
+  }
+}
+
+/* ==========================================================================
+   Media Queries - Smaller than 320px
+   ========================================================================== */
+
+@media only screen and (max-width: 320px) {
+  .pagination .pagination-label {
+    display: none;
+  }
+}
